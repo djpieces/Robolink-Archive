@@ -1,0 +1,114 @@
+.jsjr-pci-photo {
+	width: 100%;
+}
+
+.jsjr-pci-photo-thumbnail {
+	border: 1px solid #DDD;
+	padding:7px;
+}
+
+.jsjr-pci-photo-circle {
+	-moz-border-radius: 50%; 
+	-webkit-border-radius: 50%; 
+	border-radius: 50%;
+}
+
+.jsjr-pci-photo-rcorners {
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
+	border-radius: 20px;
+}
+
+.jsjr-pci-contact-section {
+	text-align:center;
+}
+
+.jsjr-pci-name {
+
+}
+
+.jsjr-pci-slogan {
+	font-size:17px;
+}
+
+.jsjr-pci-social-icons {
+	font-size:35px;
+	letter-spacing:5px;
+}
+
+.jsjr-pci-email {
+	
+}
+
+.jsjr-pci-phone {
+	font-size:20px;
+}
+
+.jsjr-pci-question {
+	border:1px solid #DDD;
+	padding:3px;
+}
+
+/*==================================================
+             Bootstrap 3 Media Queries     
+xs (<768px)
+sm (>768px)
+md (>992px)
+lg (>1200px)
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.jsjr-pci-photo {
+		width: 250px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}

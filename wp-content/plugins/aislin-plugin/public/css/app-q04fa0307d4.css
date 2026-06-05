@@ -1,0 +1,323 @@
+/* Sensei Carousel */
+.linp-featured-courses-carousel .star-rating span {
+  color: #ecb202;
+}
+.linp-featured-courses-carousel.type-gallery {
+  display: grid;
+}
+.linp-featured-courses-carousel.type-gallery.columns-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.linp-featured-courses-carousel.type-gallery.columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.linp-featured-courses-carousel.type-gallery.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.linp-featured-courses-carousel.type-gallery.columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.linp-featured-courses-carousel.type-gallery.columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.linp-featured-courses-carousel.type-gallery.columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.linp-featured-courses-carousel .featured-course-thumb {
+  width: 100%;
+}
+.linp-featured-courses-carousel .rounded .featured-course-thumb {
+  border-radius: 50%;
+  padding: 12px;
+}
+.linp-featured-courses-carousel .course-title {
+  margin: 10px 0 8px 0 !important;
+}
+.linp-featured-courses-carousel .course-duration,
+.linp-featured-courses-carousel .course-users-enrolled {
+  float: left;
+}
+.linp-featured-courses-carousel .course-excerpt {
+  margin-bottom: 10px;
+}
+.linp-featured-courses-carousel .starwrapper {
+  margin-bottom: 5px;
+}
+.linp-featured-courses-carousel .course-lesson-count {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.linp-featured-courses-carousel .course-lesson-count i {
+  font-size: 16px;
+  margin-right: 2px;
+}
+.linp-featured-courses-carousel .course-lesson-count i:before {
+  position: relative;
+  top: 3px;
+}
+.linp-featured-courses-carousel .item {
+  position: relative;
+  margin: 0 10px;
+}
+.linp-featured-courses-carousel .item .item-inner-wrap {
+  padding: 15px 18px;
+}
+.linp-featured-courses-carousel .item .cbp-row {
+  border-top: 1px solid;
+  padding: 11px 16px 12px;
+}
+.linp-featured-courses-carousel .owl-pagination {
+  margin-top: 25px;
+}
+.linp-featured-courses-carousel .owl-pagination .owl-page span {
+  background-color: transparent;
+  border: 2px solid #333;
+}
+.linp-featured-courses-carousel .owl-pagination .owl-page.active span {
+  border: 2px solid #999;
+}
+
+.linp-featured-courses-carousel.layout_1 .item .price {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price {
+  float: right;
+  padding: 5px;
+  text-align: center;
+  line-height: 24px;
+  min-height: 34px;
+  background-color: #FFC50D;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  top: 100%;
+  border-width: 5px 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent #333;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -18px;
+  top: 0;
+  border-width: 17px 15px;
+  border-style: solid;
+  border-color: #FFC50D #FFC50D #FFC50D transparent;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price .amount {
+  position: relative;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price em {
+  font-style: normal;
+  color: #333;
+  margin: 0 7px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price del {
+  color: #333;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price del .amount {
+  color: #333;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+.linp-featured-courses-carousel.layout_1 .item .price .course-price.free-course .amount {
+  font-size: 15px;
+}
+
+.linp-featured-courses-carousel.layout_2 .owl-item {
+  padding-top: 15px;
+}
+.linp-featured-courses-carousel.layout_2 .course-title, .linp-featured-courses-carousel.layout_2 .course-title a {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 0 !important;
+}
+.linp-featured-courses-carousel.layout_2 .course-title {
+  margin-top: 14px !important;
+}
+.linp-featured-courses-carousel.layout_2 .teacher-name {
+  font-size: 14px;
+  margin-top: 3px;
+}
+.linp-featured-courses-carousel.layout_2 .bottom {
+  display: flex;
+  border-top: 1px solid #dfdfdf;
+  padding: 11px 0;
+}
+.linp-featured-courses-carousel.layout_2 .bottom .price {
+  width: 70%;
+}
+.linp-featured-courses-carousel.layout_2 .bottom > a {
+  width: 30%;
+  margin-top: 6px;
+}
+.linp-featured-courses-carousel.layout_2 .sensei-course-meta {
+  margin-bottom: 11px;
+}
+.linp-featured-courses-carousel.layout_2 .star-rating {
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+.linp-featured-courses-carousel.layout_2 .star-rating span,
+.linp-featured-courses-carousel.layout_2 .star-rating span:before, .linp-featured-courses-carousel.layout_2 .star-rating:before {
+  left: auto;
+  right: 0;
+}
+.linp-featured-courses-carousel.layout_2 .item {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin: 0 10px 0 20px;
+}
+.linp-featured-courses-carousel.layout_2 .item:hover {
+  background-color: #ededed;
+  transition: background-color 0.7s;
+}
+.linp-featured-courses-carousel.layout_2 .item > div {
+  position: relative;
+  right: 10px;
+  top: -11px;
+  border: 0;
+}
+.linp-featured-courses-carousel.layout_2 .item .img-container img {
+  border-radius: 5px;
+}
+.linp-featured-courses-carousel.layout_2 .item .item-inner-wrap {
+  position: relative;
+  padding: 0 15px 0 60px;
+}
+.linp-featured-courses-carousel.layout_2 .item .teacher-thumb {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.linp-featured-courses-carousel.layout_2 .item .price {
+  position: static;
+}
+.linp-featured-courses-carousel.layout_2 .item .price .course-price {
+  background: transparent;
+}
+.linp-featured-courses-carousel.layout_2 .item .price .course-price del {
+  color: #c6c6c6;
+}
+.linp-featured-courses-carousel.layout_2 .item .price .course-price .amount,
+.linp-featured-courses-carousel.layout_2 .item .price .course-price del .amount {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: normal;
+}
+.linp-featured-courses-carousel.layout_2 .item .price .course-price .amount {
+  font-size: 15px;
+}
+.linp-featured-courses-carousel.layout_2 .item .price .course-price:before {
+  content: "";
+}
+
+.wh-similar-courses .item-inner-wrap {
+  border-bottom: 1px solid;
+  margin-bottom: 11px;
+  padding: 10px 0;
+}
+.wh-similar-courses .course-price del {
+  color: #9c9c9c;
+}
+
+/* Post List */
+.linp-post-list .item {
+  position: relative;
+  min-height: 117px;
+}
+.linp-post-list .item .img-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.linp-post-list .item .meta-data {
+  margin-bottom: 6px;
+}
+.linp-post-list .item .meta-data .date,
+.linp-post-list .item .meta-data .author {
+  font-size: 13px;
+}
+.linp-post-list .item .meta-data .author {
+  font-style: italic;
+}
+.linp-post-list .item .meta-data i {
+  position: relative;
+  font-size: 14px;
+}
+.linp-post-list .item .meta-data span {
+  margin-right: 5px;
+  display: block;
+}
+.linp-post-list .item .data h1,
+.linp-post-list .item .data h2,
+.linp-post-list .item .data h3,
+.linp-post-list .item .data h4,
+.linp-post-list .item .data h5,
+.linp-post-list .item .data h6 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.linp-post-list.vertical .item {
+  display: flex;
+}
+.linp-post-list.vertical .item .img-container {
+  margin-right: 20px;
+}
+.linp-post-list.vertical .item .meta-data span {
+  display: inline;
+}
+.linp-post-list.vertical .item .meta-data .date {
+  float: none;
+}
+.linp-post-list.vertical .item .meta-data .separator {
+  font-size: 13px;
+  margin: 0 5px 0 0;
+}
+
+.linp-post-list.layout_1 .item .img-container {
+  margin-bottom: 25px;
+}
+.linp-post-list.layout_1 .item .meta-data .author {
+  font-style: normal;
+}
+.linp-post-list.layout_1 .data hr {
+  margin: 15px 0;
+}
+.linp-post-list.layout_1 h6, .linp-post-list.layout_1 h6 a {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 12px !important;
+}
+.linp-post-list.layout_1 .button {
+  display: inline-block;
+  margin: 10px 0 15px;
+  padding: 15px 20px;
+}
+.linp-post-list.layout_1 .button i {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  /* Post List */
+  .linp-post-list.vertical .item {
+    display: block;
+  }
+}

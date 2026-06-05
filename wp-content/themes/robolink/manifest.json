@@ -1,0 +1,38 @@
+{
+    "short_name": "RobolinkBasecamp",
+    "name": "Robolink Basecamp",
+	"description": "Robolink Basecamp - STEM Robotics Kits And Online Coding Classes",
+    "start_url": "/",
+	"scope": "/",
+    "display": "standalone",
+	"background_color": "#00ADEE",    
+    "theme_color": "#333333",   
+    "orientation": "portrait-primary",
+    "icons": [      
+		{
+			"src": "/wp-content/themes/robolink/assets/icons/icons-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/wp-content/themes/robolink/assets/icons/icons-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/wp-content/themes/robolink/assets/icons/icons-180.png",
+			"type": "image/png",
+			"sizes": "180x180"
+		},
+		{
+			"src": "/wp-content/themes/robolink/assets/icons/icons-32.png",
+			"type": "image/png",
+			"sizes": "32x32"
+		},
+		{
+			"src": "/wp-content/themes/robolink/assets/icons/icons-16.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		}      
+    ]
+}

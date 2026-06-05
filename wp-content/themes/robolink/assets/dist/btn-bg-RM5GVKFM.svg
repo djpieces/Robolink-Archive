@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="172px" height="47px" viewBox="0 0 172 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BE2FF417-6680-4F16-949D-39B7ED9B1445</title>
+    <defs>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#ED1848" offset="0%"></stop>
+            <stop stop-color="#FFC500" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="learn.robolink.com" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1175.000000, -129.000000)" stroke="url(#linearGradient-1)" stroke-width="2">
+            <g id="transparent-navbar" transform="translate(40.000000, 130.000000)">
+                <g id="sign-in-button" transform="translate(1136.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="170" height="45" rx="22.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

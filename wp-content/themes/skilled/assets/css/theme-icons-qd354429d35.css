@@ -1,0 +1,347 @@
+@font-face {
+    font-family: 'skilled';
+    src:  url('../fonts/skilled-q0eb3e25bef.eot');
+    src:  url('../fonts/skilled-q0eb3e25bef.eot') format('embedded-opentype'),
+    url('../fonts/skilled-q0eb3e25bef.ttf') format('truetype'),
+    url('../fonts/skilled-q0eb3e25bef.woff') format('woff'),
+    url('../fonts/skilled-q0eb3e25bef.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-skilled"]:before, [class*=" icon-skilled"]:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'skilled' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-skilledadd-bolder:before {
+  content: "\e949";
+}
+.icon-skilledadd:before {
+  content: "\e94b";
+}
+.icon-skilledminus:before {
+  content: "\e94c";
+}
+.icon-skilledsubstract-light:before {
+  content: "\e94e";
+}
+.icon-skilledsubstract:before {
+  content: "\e94f";
+}
+.icon-skilledadd-bookmarks:before {
+  content: "\e935";
+}
+.icon-skilledbookmark-button:before {
+  content: "\e936";
+}
+.icon-skilledbook-with-bookmark:before {
+  content: "\e937";
+}
+.icon-skilledcancel:before {
+  content: "\e938";
+}
+.icon-skilledcopy-content:before {
+  content: "\e93b";
+}
+.icon-skilledcross-1:before {
+  content: "\e93d";
+}
+.icon-skilledcross:before {
+  content: "\e93f";
+}
+.icon-skilledcross-out:before {
+  content: "\e940";
+}
+.icon-skilledfile-folder:before {
+  content: "\e941";
+}
+.icon-skilledplay-sign:before {
+  content: "\e943";
+}
+.icon-skilledround-account-button-with-user-inside2:before {
+  content: "\e946";
+}
+.icon-skilledround-favorite-button:before {
+  content: "\e947";
+}
+.icon-skilledspeaker:before {
+  content: "\e948";
+}
+.icon-skilledgraduation-cap:before {
+  content: "\e98b";
+}
+.icon-skilledexternal-link-square:before {
+  content: "\e98d";
+}
+.icon-skilledf0c0:before {
+  content: "\e98e";
+}
+.icon-skilledsend-o:before {
+  content: "\e98f";
+}
+.icon-skilleduser-plus:before {
+  content: "\e990";
+}
+.icon-skilledf058:before {
+  content: "\e991";
+}
+.icon-skilledf007:before {
+  content: "\e992";
+}
+.icon-skilledcreative-commons:before {
+  content: "\e993";
+}
+.icon-skilledfacetime-button:before {
+  content: "\e994";
+}
+.icon-skilledlight-bulb3:before {
+  content: "\e995";
+}
+.icon-skilledmale-user-in-circular-button:before {
+  content: "\e996";
+}
+.icon-skilledman-in-circular-interface-button:before {
+  content: "\e997";
+}
+.icon-skilledpencil3:before {
+  content: "\e998";
+}
+.icon-skilledround-account-button-with-user-inside:before {
+  content: "\e999";
+}
+.icon-skilledtime4:before {
+  content: "\e99a";
+}
+.icon-skilledtrophy:before {
+  content: "\e99b";
+}
+.icon-skillednumber1:before {
+  content: "\e900";
+}
+.icon-skillednumber2:before {
+  content: "\e901";
+}
+.icon-skillednumber3:before {
+  content: "\e902";
+}
+.icon-skillednumber4:before {
+  content: "\e903";
+}
+.icon-skilledagenda-one:before {
+  content: "\e904";
+}
+.icon-skilledagenda:before {
+  content: "\e905";
+}
+.icon-skilledamerican-football:before {
+  content: "\e906";
+}
+.icon-skilledarrow:before {
+  content: "\e907";
+}
+.icon-skilledbackpack:before {
+  content: "\e908";
+}
+.icon-skilledbadge:before {
+  content: "\e909";
+}
+.icon-skilledbasketball:before {
+  content: "\e90a";
+}
+.icon-skilledbell-one:before {
+  content: "\e90b";
+}
+.icon-skilledbell:before {
+  content: "\e90c";
+}
+.icon-skilledbig-church-bell:before {
+  content: "\e90d";
+}
+.icon-skilledbook-note:before {
+  content: "\e90e";
+}
+.icon-skilledbook:before {
+  content: "\e90f";
+}
+.icon-skilledbook-and-computer-mouse:before {
+  content: "\e910";
+}
+.icon-skilledbook-with-white-bookmark:before {
+  content: "\e911";
+}
+.icon-skilledbus:before {
+  content: "\e912";
+}
+.icon-skilledcalendar:before {
+  content: "\e913";
+}
+.icon-skilledcertification:before {
+  content: "\e914";
+}
+.icon-skilledclock-one:before {
+  content: "\e915";
+}
+.icon-skilledclock:before {
+  content: "\e916";
+}
+.icon-skilledcustomer2:before {
+  content: "\e917";
+}
+.icon-skilleddark-eye:before {
+  content: "\e918";
+}
+.icon-skilleddiploma:before {
+  content: "\e919";
+}
+.icon-skillededit-draw-pencil:before {
+  content: "\e91a";
+}
+.icon-skilledflask:before {
+  content: "\e91b";
+}
+.icon-skilledfootball:before {
+  content: "\e91c";
+}
+.icon-skilledhtml2:before {
+  content: "\e91d";
+}
+.icon-skilledicon:before {
+  content: "\e91e";
+}
+.icon-skilledlight-bulb:before {
+  content: "\e91f";
+}
+.icon-skilledmeasuring:before {
+  content: "\e920";
+}
+.icon-skilledmedal3:before {
+  content: "\e921";
+}
+.icon-skilledmedal-one:before {
+  content: "\e922";
+}
+.icon-skilledmedal:before {
+  content: "\e923";
+}
+.icon-skilledmegaphone:before {
+  content: "\e924";
+}
+.icon-skillednotification-bell:before {
+  content: "\e925";
+}
+.icon-skilledpaint-palette:before {
+  content: "\e926";
+}
+.icon-skilledpencil:before {
+  content: "\e927";
+}
+.icon-skilledplaceholder:before {
+  content: "\e928";
+}
+.icon-skilledquality3:before {
+  content: "\e929";
+}
+.icon-skilledribbon-badge-award:before {
+  content: "\e92a";
+}
+.icon-skilledsaturn-rings:before {
+  content: "\e92b";
+}
+.icon-skilledschool:before {
+  content: "\e92c";
+}
+.icon-skilledscissors:before {
+  content: "\e92d";
+}
+.icon-skilledsearch:before {
+  content: "\e92e";
+}
+.icon-skilledsharing-interface:before {
+  content: "\e92f";
+}
+.icon-skilledsmall-camera:before {
+  content: "\e930";
+}
+.icon-skilledtactics:before {
+  content: "\e931";
+}
+.icon-skilledtarget:before {
+  content: "\e932";
+}
+.icon-skilledtime:before {
+  content: "\e933";
+}
+.icon-skilledtwo-quotes:before {
+  content: "\e934";
+}
+.icon-skilledloupe1:before {
+  content: "\e9fb";
+}
+.icon-skilledmenu:before {
+  content: "\e9d4";
+}
+.icon-skilledmenu-button:before {
+  content: "\e9ff";
+}
+.icon-skilledmenu-lines:before {
+  content: "\ea00";
+}
+.icon-skilledagenda2:before {
+  content: "\e939";
+}
+.icon-skilledamerican-football1:before {
+  content: "\e93a";
+}
+.icon-skilledbadge2:before {
+  content: "\e93c";
+}
+.icon-skilledbell-one2:before {
+  content: "\e93e";
+}
+.icon-skilledbook-one:before {
+  content: "\e942";
+}
+.icon-skilledbook-and-computer-mouse2:before {
+  content: "\e944";
+}
+.icon-skilledbus2:before {
+  content: "\e945";
+}
+.icon-skilledcustomer3:before {
+  content: "\e94a";
+}
+.icon-skillededit-draw-pencil2:before {
+  content: "\e94d";
+}
+.icon-skilledfootball2:before {
+  content: "\e952";
+}
+.icon-skilledmedal1:before {
+  content: "\e957";
+}
+.icon-skilledpencil2:before {
+  content: "\e95c";
+}
+.icon-skilledscissors2:before {
+  content: "\e962";
+}
+.icon-skilledbook1:before {
+  content: "\e96c";
+}
+.icon-skilledcalendar22:before {
+  content: "\e96f";
+}
+.icon-skilledribbon:before {
+  content: "\e974";
+}
