@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KKDVFH4LV4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KKDVFH4LV4');
+</script>	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>0.5: Getting to Know Your Controller &#8211; Robolink Basecamp</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link rel="alternate" type="application/rss+xml" title="Robolink Basecamp &raquo; Feed" href="https://archive.learn.robolink.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Robolink Basecamp &raquo; Comments Feed" href="https://archive.learn.robolink.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://archive.learn.robolink.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Farchive.learn.robolink.com%2Flesson%2F0-5-flying-codrone-edu-with-controller%2F&#038;lang=en" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://archive.learn.robolink.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Farchive.learn.robolink.com%2Flesson%2F0-5-flying-codrone-edu-with-controller%2F&#038;format=xml&#038;lang=en" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='layerslider-css' href='https://archive.learn.robolink.com/wp-content/plugins/LayerSlider/assets/static/layerslider/css/layerslider.css?ver=7.14.0' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='sensei-block-patterns-style-css' href='https://archive.learn.robolink.com/wp-content/plugins/sensei-lms/assets/dist/css/block-patterns.css?ver=9948cd71726f87989c2e' type='text/css' media='all' />
+<link rel='stylesheet' id='aislin-plugin-css' href='https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/public/css/app.css?ver=4.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='aislin-plugin-style-css' href='https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/public/css/style.css?ver=4.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='robolink-css' href='https://archive.learn.robolink.com/wp-content/plugins/robolink/public/assets/css/robolink-public.min.css?ver=1.1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='module-frontend-css' href='https://archive.learn.robolink.com/wp-content/plugins/sensei-lms/assets/dist/css/modules-frontend.css?ver=6f282392f857e1cd0631' type='text/css' media='all' />
+<link rel='stylesheet' id='pages-frontend-css' href='https://archive.learn.robolink.com/wp-content/plugins/sensei-lms/assets/dist/css/pages-frontend.css?ver=273eee0a3eb3fc744030' type='text/css' media='all' />
+<link rel='stylesheet' id='sensei-frontend-css' href='https://archive.learn.robolink.com/wp-content/plugins/sensei-lms/assets/dist/css/frontend.css?ver=11d6148c6a4a283be47a' type='text/css' media='screen' />
+<link rel='stylesheet' id='aislin-pci-wp-css-css' href='https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/src/Integration/WP_Widgets/Personal_Contact_Info/css/wp-styles.css?ver=1.0' type='text/css' media='' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=8.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css' href='https://archive.learn.robolink.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=UJyD+5WcuYcPGWt' type='text/css' media='all' />
+<link rel='stylesheet' id='bsf-Defaults-css' href='https://archive.learn.robolink.com/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=3.19.23' type='text/css' media='all' />
+<link rel='stylesheet' id='bsf-iconsmind-css' href='https://archive.learn.robolink.com/wp-content/uploads/smile_fonts/iconsmind/iconsmind.css?ver=3.19.23' type='text/css' media='all' />
+<link rel='stylesheet' id='bsf-linear-css' href='https://archive.learn.robolink.com/wp-content/uploads/smile_fonts/linear/linear.css?ver=3.19.23' type='text/css' media='all' />
+<link rel='stylesheet' id='groundwork-grid-css' href='https://archive.learn.robolink.com/wp-content/themes/skilled/assets/css/groundwork-responsive.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://archive.learn.robolink.com/wp-content/themes/skilled/assets/css/font-awesome.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='skilled-theme-icons-css' href='https://archive.learn.robolink.com/wp-content/themes/skilled/assets/css/theme-icons.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='skilled-style-css' href='https://archive.learn.robolink.com/wp-content/themes/skilled/style.min.css?ver=6.9' type='text/css' media='all' />
+<style id='skilled-style-inline-css' type='text/css'>
+.header-mobile {display: none;}@media screen and (max-width:767px) {.header-left {padding-left: 0;}.wh-header, .wh-top-bar {display: none;}.header-mobile {display: block;}}
+/*# sourceURL=skilled-style-inline-css */
+</style>
+<link rel='stylesheet' id='iconsmind-line-icons-css' href='https://archive.learn.robolink.com/wp-content/themes/skilled/assets/css/iconsmind-line-icons.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='linear-icons-css' href='https://archive.learn.robolink.com/wp-content/themes/skilled/assets/css/linear-icons.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='child-style-css' href='https://archive.learn.robolink.com/wp-content/themes/robolink/assets/dist/style.css?ver=1.3.23' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css' href='https://archive.learn.robolink.com/wp-content/themes/robolink/assets/dist/responsive.css?ver=1.3.23' type='text/css' media='all' />
+<link rel='stylesheet' id='typekit-css' href='https://use.typekit.net/eyf4ndw.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyPhoto-style-css' href='https://archive.learn.robolink.com/wp-content/themes/robolink/vendor/prettyPhoto/css/prettyPhoto.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/packages/assets/assets/css/magnific-popup.css?ver=6.9' type='text/css' media='all' />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300italic,400italic,500italic,600italic,700italic,800italic,900italic%7CRaleway:700&#038;subset=latin&#038;display=swap&#038;ver=1725450970" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300italic,400italic,500italic,600italic,700italic,800italic,900italic%7CRaleway:700&#038;subset=latin&#038;display=swap&#038;ver=1725450970" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800,900,300italic,400italic,500italic,600italic,700italic,800italic,900italic%7CRaleway:700&#038;subset=latin&#038;display=swap&#038;ver=1725450970" /></noscript><link rel='stylesheet' id='skilled_options_style-css' href='//archive.learn.robolink.com/wp-content/uploads/skilled_options_style.css?ver=1725450970' type='text/css' media='all' />
+<style id='skilled_options_style-inline-css' type='text/css'>
+.lin-slider-button:hover {
+  border-color: #ffc50d !important;
+  color: #ffc50d !important;
+}
+.lin-slider-alt-button {
+    border-color: #ffc50d !important;
+      background-color: #ffc50d !important;
+      color: #fff !important;
+}
+
+@media (max-width: 850px) {
+    
+    .wh-top-bar-additional .scp-icon-bullet-text-icon {
+        font-size: 28px !important;
+    }
+    
+}
+.scp_icon-0a7f43e1007ac69850a095188879299a.scp-icon-background{margin:0 8px;text-align:center}.scp_icon-0a7f43e1007ac69850a095188879299a i{color:#666;font-size:20px;line-height:46px}.scp_icon-0a7f43e1007ac69850a095188879299a i:hover{color:#666}
+.scp_icon-76ecb01287788e632816282ece8dc52d.scp-icon-background{margin:0 8px;text-align:center}.scp_icon-76ecb01287788e632816282ece8dc52d i{color:#666;font-size:20px;line-height:46px}.scp_icon-76ecb01287788e632816282ece8dc52d i:hover{color:#666}
+.scp_icon-94b75c9ffc2f5002c006e18274b3feda.scp-icon-background{margin:0 8px 0 25px;text-align:center}.scp_icon-94b75c9ffc2f5002c006e18274b3feda i{color:#666;font-size:20px;line-height:46px}.scp_icon-94b75c9ffc2f5002c006e18274b3feda i:hover{color:#666}
+.scp_icon_bullet_text-e6a204cd4f76a987f06caac94ca7d007.scp-shortcode{padding:0px;margin:0px 15px 0px 0px}.scp_icon_bullet_text-e6a204cd4f76a987f06caac94ca7d007 .scp-icon-bullet-text-icon{color:#666;font-size:40px}.scp_icon_bullet_text-e6a204cd4f76a987f06caac94ca7d007 .title{color:#f6c016}.scp_icon_bullet_text-e6a204cd4f76a987f06caac94ca7d007 .scp-icon-bullet-text-text{margin:-5px 0px 0px 0px}.scp_icon_bullet_text-e6a204cd4f76a987f06caac94ca7d007 .subtitle{color:#666}.scp_icon_bullet_text-e6a204cd4f76a987f06caac94ca7d007 .description{color:#666}
+.scp_icon_bullet_text-cfff5f296f3d80857beef318cae02f3d.scp-shortcode{padding:0px;margin:0px 15px 0px 0px}.scp_icon_bullet_text-cfff5f296f3d80857beef318cae02f3d .scp-icon-bullet-text-icon{color:#666;font-size:40px}.scp_icon_bullet_text-cfff5f296f3d80857beef318cae02f3d .title{color:#f6c016}.scp_icon_bullet_text-cfff5f296f3d80857beef318cae02f3d .scp-icon-bullet-text-text{margin:-5px 0px 0px 0px}.scp_icon_bullet_text-cfff5f296f3d80857beef318cae02f3d .subtitle{color:#666}.scp_icon_bullet_text-cfff5f296f3d80857beef318cae02f3d .description{color:#666}
+.scp_quick_sidebar_trigger-9396e5227277c6197c1fd950c905879b{width:350px;right:-350px;background-color:#f4f4f4;}
+.sk-browse-menu .sub-menu {
+    left: -17px;
+}.vc_custom_1499259857454{margin-right: 50px !important;}.vc_custom_1499260290037{border-right-width: 1px !important;border-left-width: 1px !important;padding-top: 15px !important;padding-right: 30px !important;padding-bottom: 21px !important;padding-left: 30px !important;background-color: #f4f4f4 !important;border-left-color: rgba(119,119,119,0.15) !important;border-left-style: solid !important;border-right-color: rgba(119,119,119,0.15) !important;border-right-style: solid !important;}.vc_custom_1499260077264{padding-right: 30px !important;padding-left: 50px !important;}.vc_custom_1499259993044{border-right-width: 1px !important;padding-top: 15px !important;padding-right: 30px !important;padding-bottom: 15px !important;padding-left: 30px !important;border-right-color: rgba(51,51,51,0.15) !important;border-right-style: solid !important;}.vc_custom_1499260009941{border-right-width: 1px !important;border-left-width: 1px !important;padding-top: 15px !important;padding-right: 30px !important;padding-bottom: 15px !important;padding-left: 30px !important;border-left-color: rgba(51,51,51,0.15) !important;border-left-style: solid !important;border-right-color: rgba(51,51,51,0.15) !important;border-right-style: solid !important;}.vc_custom_1499258360208{padding-top: 13px !important;}.vc_custom_1602532635326{margin-top: 12px !important;margin-bottom: 12px !important;}.vc_custom_1602532625544{margin-top: 12px !important;margin-bottom: 12px !important;}.vc_custom_1486557166079{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1486557111768{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1486120454180{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1486557063234{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1498731873916{margin-bottom: 0px !important;padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1498816027003{margin-bottom: 40px !important;padding-top: 15px !important;}.vc_custom_1499159240217{border-top-width: 1px !important;border-bottom-width: 1px !important;padding-top: 30px !important;padding-bottom: 35px !important;border-top-color: rgba(255,255,255,0.07) !important;border-top-style: solid !important;border-bottom-color: rgba(255,255,255,0.07) !important;border-bottom-style: solid !important;}.vc_custom_1499159245822{padding-top: 5px !important;}.vc_custom_1498815965908{margin-bottom: 0px !important;}.vc_custom_1498816102915{margin-bottom: 0px !important;}.vc_custom_1490007556855{margin-bottom: 0px !important;}.vc_custom_1490007547463{margin-bottom: 0px !important;}.vc_custom_1496749370573{margin-bottom: 20px !important;}.vc_custom_1495456492688{margin-right: 15% !important;margin-bottom: 25px !important;}.vc_custom_1496749480644{margin-bottom: 20px !important;}.vc_custom_1495456315180{margin-bottom: 7px !important;}.vc_custom_1495456319476{margin-bottom: 7px !important;}.vc_custom_1495456323955{margin-bottom: 7px !important;}.vc_custom_1555409074069{margin-bottom: 7px !important;}.vc_custom_1495456327524{margin-bottom: 7px !important;}.vc_custom_1495456331131{margin-bottom: 7px !important;}.vc_custom_1496749498711{margin-bottom: 20px !important;}.vc_custom_1495456367890{margin-bottom: 7px !important;}.vc_custom_1495456359690{margin-bottom: 7px !important;}.vc_custom_1495456355098{margin-bottom: 7px !important;}.vc_custom_1495456349979{margin-bottom: 7px !important;}.vc_custom_1495456345189{margin-bottom: 7px !important;}.vc_custom_1495456340590{margin-bottom: 7px !important;}.vc_custom_1495456336327{margin-bottom: 7px !important;}.vc_custom_1496749513529{margin-bottom: 20px !important;}.vc_custom_1495456492688{margin-right: 15% !important;margin-bottom: 25px !important;}.vc_custom_1494415337866{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1494415343524{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1494415348901{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1494415353492{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1498645263172{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1498645524637{margin-bottom: 0px !important;}.vc_custom_1498645429174{margin-bottom: 0px !important;padding-top: 0px !important;}.vc_custom_1496751804171{margin-bottom: 10px !important;}.vc_custom_1496753735175{margin-right: 15% !important;margin-bottom: 0px !important;padding-bottom: 0px !important;}.vc_custom_1498645354858{margin-right: 15% !important;}.vc_custom_1491466992847{margin-bottom: 0px !important;padding-top: 25px !important;padding-bottom: 10px !important;}.vc_custom_1491466989293{margin-bottom: 0px !important;padding-top: 25px !important;padding-bottom: 10px !important;}.vc_custom_1495196673903{margin-top: 0px !important;padding-top: 0px !important;background-color: #f4f4f4 !important;}.vc_custom_1497616870402{margin-bottom: 15px !important;}.vc_custom_1497616837480{margin-bottom: 15px !important;}.vc_custom_1476096481664{margin-bottom: 25px !important;}.vc_custom_1494936336239{padding-top: 15px !important;}.vc_custom_1494415183190{padding-top: 8px !important;}.vc_custom_1486557166079{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1486557111768{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1486120454180{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}.vc_custom_1486557063234{margin-bottom: 0px !important;padding-top: 5px !important;padding-right: 5px !important;padding-bottom: 5px !important;padding-left: 5px !important;}
+/*# sourceURL=skilled_options_style-inline-css */
+</style>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="layerslider-utils-js-extra">
+/* <![CDATA[ */
+var LS_Meta = {"v":"7.14.0","fixGSAP":"1"};
+//# sourceURL=layerslider-utils-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/LayerSlider/assets/static/layerslider/js/layerslider.utils.js?ver=7.14.0" id="layerslider-utils-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/LayerSlider/assets/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=7.14.0" id="layerslider-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/LayerSlider/assets/static/layerslider/js/layerslider.transitions.js?ver=7.14.0" id="layerslider-transitions-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/vendor/modernizr-2.7.0.min.js" id="modernizr-js"></script>
+<script></script><meta name="generator" content="Powered by LayerSlider 7.14.0 - Build Heros, Sliders, and Popups. Create Animations and Beautiful, Rich Web Content as Easy as Never Before on WordPress." />
+<!-- LayerSlider updates and docs at: https://layerslider.com -->
+<link rel="https://api.w.org/" href="https://archive.learn.robolink.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://archive.learn.robolink.com/wp-json/wp/v2/lessons/9250" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://archive.learn.robolink.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel="canonical" href="https://archive.learn.robolink.com/lesson/0-5-flying-codrone-edu-with-controller/" />
+<link rel='shortlink' href='https://archive.learn.robolink.com/?p=9250' />
+<meta name="generator" content="Redux 4.5.9" />		<style>
+			:root {
+						}
+		</style>
+		
+<style type="text/css" id="breadcrumb-trail-css">.breadcrumbs .trail-browse,.breadcrumbs .trail-items,.breadcrumbs .trail-items li {display: inline-block;margin:0;padding: 0;border:none;background:transparent;text-indent: 0;}.breadcrumbs .trail-browse {font-size: inherit;font-style:inherit;font-weight: inherit;color: inherit;}.breadcrumbs .trail-items {list-style: none;}.trail-items li::after {content: "\002F";padding: 0 0.5em;}.trail-items li:last-of-type::after {display: none;}</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1723519821748{padding-top: 20px !important;padding-right: 20px !important;padding-bottom: 20px !important;padding-left: 20px !important;background-color: #ffdddd !important;border-radius: 3px !important;}.vc_custom_1723519910453{padding-top: 20px !important;padding-right: 20px !important;padding-bottom: 20px !important;padding-left: 20px !important;background-color: #ffdddd !important;border-radius: 3px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>		<link rel="icon" type="image/png" href="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/images/rblk-favicon-16x16.png">
+	<link rel="manifest" href="https://archive.learn.robolink.com/wp-content/themes/robolink/manifest.json">
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='vc_carousel_css-css' href='https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/lib/vc/vc_carousel/css/vc_carousel.min.css?ver=8.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='lightbox2-css' href='https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/lightbox2/dist/css/lightbox.min.css?ver=8.0.1' type='text/css' media='all' />
+</head><body class="wp-singular lesson-template-default single single-lesson postid-9250 wp-theme-skilled wp-child-theme-robolink sensei-robolink_theme sensei lesson course-id-9219 header-top page-title-enabled single-layout-default wpb-js-composer js-comp-ver-8.0.1 vc_responsive">    
+    	<style>
+	.banner2_0 {
+		display: flex;
+		justify-content: center;
+		height: 30px;
+		padding: 6px 8px;
+		align-items: center;
+		gap: 10px;
+		background: linear-gradient(90deg, #8C00EE 0%, #7AEBC2 11.54%, #EEBB8D 58.65%, #F484E6 100%);
+
+		color: #1C1042;
+		text-align: center;
+		/* font-family: Cabin; */
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.banner2_0 a {
+		display: inline-flex;
+		padding: 4px 10px;
+		align-items: center;
+		gap: 20px;
+		border-radius: 40px;
+		background: #FFF;
+		color: #C61D45;
+		text-align: center;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+</style>
+<div class="banner2_0">
+	<div>We’ve moved to our new lesson portal: Robolink Learn! Lessons here will remain available until the end of June 2026.</div>
+	<a href="https://learn.robolink.com/" target="_blank">Visit new lessons</a>
+</div><header id="main_header">	
+	<div id="header-bg"  class="codrone-edu_bg ">
+		
+		<div id="header-bg-overlay">
+
+			<div id="header-bg-aux">
+    <div id="header-bg-aux-overlay">    
+			<div id="logo-wrapper" class="vc_row vc_row_fluid">
+				<div class="vc_column_container vc_col-sm-6 vc_col-has-fill">
+					<div class="vc_column-inner">
+						<div class="flex">
+							<a href="https://archive.learn.robolink.com" id="logo">
+								<img src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/images/logo.svg" alt="Robolink Basecamp" />
+							</a>							
+						</div>
+						<a href="https://archive.learn.robolink.com/course/getting-started-with-codrone-edu/" class="back_to_course"><span class="lnr lnr-chevron-left"></span> Back to Getting Started with CoDrone EDU</a>					</div>
+				</div>
+				<div class="vc_column_container vc_col-sm-6 vc_col-has-fill">
+					<div class="vc_column-inner">
+						<div class="header_btn_wrapper ">
+
+									<div class="custom-select-wrapper">
+			<div class="custom-select">
+				<div class="custom-select__trigger"><span>English</span>
+					<div class="arrow"></div>
+				</div>
+				<div class="custom-options">
+											<span class="custom-option selected" data-value="https://archive.learn.robolink.com/lesson/0-5-flying-codrone-edu-with-controller/">English</span>
+									</div>
+			</div>
+		</div>
+		
+							
+								<a href="https://archive.learn.robolink.com/login/" class="header_btn" id="login_btn">
+									<span>Register / Login </span>
+								</a>
+
+							
+						</div>
+					</div>
+				</div>
+
+				<div id="menu-responsive-btn">
+					<hr />
+					<hr />
+					<hr />
+					<span class="lnr lnr-cross"></span>
+				</div>
+				<div id="menu-responsive">
+					<ul>
+						
+
+							<li class="lang-selector">
+										<div class="custom-select-wrapper">
+			<div class="custom-select">
+				<div class="custom-select__trigger"><span>English</span>
+					<div class="arrow"></div>
+				</div>
+				<div class="custom-options">
+											<span class="custom-option selected" data-value="https://archive.learn.robolink.com/lesson/0-5-flying-codrone-edu-with-controller/">English</span>
+									</div>
+			</div>
+		</div>
+																	</li>
+
+						
+						
+							<li class="mb-10"><a href="https://archive.learn.robolink.com/login/" id="responsive_login_btn">Sign in</a></li>
+
+						
+					</ul>
+
+					
+				</div>
+
+			</div>
+
+			
+			
+				<div id="header_lesson" class="cbp-container">
+	<div class="vc_row vc_row_fluid">
+		<div id="lesson_text" class="vc_column_container vc_col-sm-6 vc_col-has-fill">
+			<div class="vc_column-inner">
+				<h1>0.5: Getting to Know Your Controller</h1>
+				<div class="description">
+					Let's learn to fly with the remote control!				</div>
+			</div>
+		</div>
+		<div id="lesson_picture" class="vc_column_container vc_col-sm-6 vc_col-has-fill">
+			<div class="vc_column-inner">
+				<div class="header_img_wrapper">
+					<img width="378" height="378" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-378x378.jpg" class="lesson-img wp-post-image" alt="" title="0.5: Getting to Know Your Controller" decoding="async" fetchpriority="high" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-378x378.jpg 378w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-150x150.jpg 150w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-300x300.jpg 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng.jpg 999w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-193x193.jpg 193w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-220x220.jpg 220w" sizes="(max-width: 378px) 100vw, 378px" />					<img width="193" height="193" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-193x193.jpg" class="lesson-img-responsive wp-post-image" alt="" title="0.5: Getting to Know Your Controller" decoding="async" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-193x193.jpg 193w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-150x150.jpg 150w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-300x300.jpg 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng.jpg 999w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-378x378.jpg 378w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/codroneEDU_started_eng-220x220.jpg 220w" sizes="(max-width: 193px) 100vw, 193px" />				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    </div>
+</div>
+			
+		</div>
+	</div>
+</header>    
+	    <div class="cbp-row wh-content">
+		
+        <div class="cbp-container">
+            <div class="one whole wh-padding wh-content-inner">
+
+            <div id="lesson-content">
+    <div id="lesson-info">
+        
+        	<nav id="post-entries" class="post-entries fix">
+					<div class="nav-prev fl">
+				<a href="https://archive.learn.robolink.com/lesson/0-4-powering-pairing-and-charging-2-2/" rel="prev">
+					<span class="lnr lnr-chevron-left"></span>
+					0.4: Powering, Pairing, and Charging				</a>
+			</div>
+		
+					<div class="nav-next fr">
+				<a href="https://archive.learn.robolink.com/lesson/0-6-trimming/" rel="next">
+					0.6: Trimming					<span class="lnr lnr-chevron-right"></span>
+				</a>
+			</div>
+			</nav>
+
+        <div class="vc_row vc_row_fluid">
+            <div class="vc_column_container vc_col-sm-8 vc_col-has-fill">
+                <div class="vc_column-inner">
+                    
+                    <div id="lesson-uses">       
+    <h3>This lesson works with:</h3>  
+    <div class="lesson-uses-items">
+        <div class="lesson-uses-item">
+            <div class="rounded-icon">
+                <img src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/images/codrone-edu-icon.jpg" />
+            </div>  
+            <div class="desc">
+                                CoDrone EDU                            </div>
+        </div>
+
+        
+            </div>
+</div>
+                    <div class="vc_row vc_row_fluid">
+                        <div class="vc_column_container vc_col-sm-12 vc_col-has-fill">
+                            <div class="vc_column-inner">                                
+                                                                    <ul class="lesson-tags">
+                                        
+                                            <li>CDE</li>
+
+                                        
+                                            <li>controller</li>
+
+                                        
+                                            <li>flying</li>
+
+                                        
+                                            <li>getting started</li>
+
+                                        
+                                            <li>piloting</li>
+
+                                        
+                                            <li>remote control</li>
+
+                                        
+                                            <li>Smart controller</li>
+
+                                                                                <span class="clear"></span>
+                                    </ul>
+                                    <div class="clear"></div>
+                                                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vc_row vc_row_fluid m-bottom-22">
+                        <div class="vc_column_container vc_col-sm-6 vc_col-has-fill" id="lesson-info-grade-level">
+                            <div class="vc_column-inner">
+                                <h3>Grade level:</h3>
+                                <div>6 - 12+</div>
+                            </div>
+                        </div>
+                        <div class="vc_column_container vc_col-sm-6 vc_col-has-fill" id="lesson-info-time-required">
+                            <div class="vc_column-inner">
+                                <h3>Approx. time required:</h3>
+                                <div>30 - 45 mins</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="vc_row vc_row_fluid" id="lesson-info-aux">
+
+                        
+                        <div class="vc_column_container vc_col-sm-6 vc_col-has-fill" id="lesson-info-download-pdf">
+                            <div class="vc_column-inner">
+                                <form method="post" id="lesson_download_pdf_form" action="https://archive.learn.robolink.com/lesson/0-5-flying-codrone-edu-with-controller/">
+                                    <input type="hidden" id="robolink-nonce" name="robolink-nonce" value="75372691da" /><input type="hidden" name="_wp_http_referer" value="/lesson/0-5-flying-codrone-edu-with-controller/" />                                    <input type="hidden" name="lesson-download-pdf" value="download" >
+                                    <a id="lesson_download_pdf_btn" href="#" onclick="document.getElementById('lesson_download_pdf_form').submit(); return false;" class="robolink-btn2 robolink-btn-100">Download as PDF</a>
+                                </form>                               
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="vc_column_container vc_col-sm-4 vc_col-has-fill">
+                <div class="vc_column-inner">
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <article class="lesson post post-9250 type-lesson status-publish has-post-thumbnail hentry lesson-tag-cde lesson-tag-controller lesson-tag-flying lesson-tag-getting-started lesson-tag-piloting lesson-tag-remote-control lesson-tag-smart-controller module-getting-started odd">
+        
+                <form method="POST" action="https://archive.learn.robolink.com/lesson/0-5-flying-codrone-edu-with-controller/" enctype="multipart/form-data" name="robolink-form">
+
+            <section class="entry fix">
+                <div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f17760f" name="6a2212f17760f" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 1</span></div>
+	
+			<h2>Pre-Flight Checklist</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>You are about to take your first flight with CoDrone EDU! Before you do, there are a few important notes to ensure a safe flight.</p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element vc_custom_1723519821748" >
+		<div class="wpb_wrapper">
+			<p><img decoding="async" class="wp-image-11766 alignleft" src="https://archive.learn.robolink.com/wp-content/uploads/2023/06/icon_warning-150x150-2-84x85.png" alt="" width="114" height="115" /></p>
+<p><strong>WARNING</strong></p>
+<p>If your drone motor stalls during takeoff and is not spinning, <strong>immediately </strong>emergency stop the motors to prevent motor burnout. Once stopped, please review the information found in our Help Docs article <strong>&#8220;<a href="https://robolink.helpdocs.io/article/7o1560fbai-what-do-i-do-if-one-of-my-co-drone-edu-propellers-isn-t-spinning">What do I do if one of my CoDrone EDU propellers isn&#8217;t spinning</a>?&#8221;</strong></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<ul>
+<li>CoDrone EDU is meant to be an indoor drone only. If flown outdoors, you may lose it!</li>
+<li>Make sure you have enough space to fly comfortably.</li>
+<li>Beware of ceiling fans and breakable items. You wouldn’t want to knock anything over.</li>
+<li>If at home, keep pets out of the room so CoDrone EDU does not become a chew toy.</li>
+<li>If you are somewhere with high ceilings or ledges that are difficult to reach, have something ready that can help you bring it down.</li>
+<li>When picking up the drone, protect your fingers by holding the drone from the guards at all times.</li>
+<li>If you have long hair, you may want to tie it up.</li>
+</ul>
+<p>Now that you’ve read the procedures, read on to get started!</p>
+
+		</div>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f178660" name="6a2212f178660" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 2</span></div>
+	
+			<h2>What Do All the Buttons Do?</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Take a moment to look at all the buttons on your controller. You will be learning how to use the controls to take your first flight with CoDrone EDU.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1516" height="732" src="https://archive.learn.robolink.com/wp-content/uploads/2023/07/Screenshot-2023-07-12-at-8.58.19-PM.png" class="vc_single_image-img attachment-full" alt="" title="cde-controller-diagram" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/07/Screenshot-2023-07-12-at-8.58.19-PM.png 1516w, https://archive.learn.robolink.com/wp-content/uploads/2023/07/Screenshot-2023-07-12-at-8.58.19-PM-300x145.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/07/Screenshot-2023-07-12-at-8.58.19-PM-1024x494.png 1024w" sizes="(max-width: 1516px) 100vw, 1516px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f1793fa" name="6a2212f1793fa" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 3</span></div>
+	
+			<h2>Controller Care</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Before you fly, it&#8217;s important to remember a few notes about controller maintenance. It may look like a video game controller, but don’t treat it like one.</p>
+<ul>
+<li>Dropping it on the floor or hitting the controller forcefully can cause damage to the circuitry.</li>
+<li>Always remove the USB cable when not actively powering or programming the controller. Disconnected it gently without bending the connector.</li>
+<li>Be gentle when folding out the antenna and the handlebars.</li>
+<li>Do not excessively twist back and forth any of the movable pieces.</li>
+<li>When inserting batteries, do not insert them backwards or allow any pieces to fall inside the controller.</li>
+</ul>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="720" height="585" src="https://archive.learn.robolink.com/wp-content/uploads/2021/10/batteries-e1691687861968.png" class="vc_single_image-img attachment-full" alt="" title="codrone-controller-batteries" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/10/batteries-e1691687861968.png 720w, https://archive.learn.robolink.com/wp-content/uploads/2021/10/batteries-e1691687861968-300x244.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/10/batteries-e1691687861968-100x81.png 100w, https://archive.learn.robolink.com/wp-content/uploads/2021/10/batteries-e1691687861968-378x307.png 378w, https://archive.learn.robolink.com/wp-content/uploads/2021/10/batteries-e1691687861968-150x122.png 150w" sizes="(max-width: 720px) 100vw, 720px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f179f73" name="6a2212f179f73" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 4</span></div>
+	
+			<h2>Controller Video Tutorial</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Follow along with the video tutorial below to become an expert on your CoDrone EDU controller. Make sure you have enough room! Then, keep reading below to review what you learned.</p>
+
+		</div>
+	</div>
+
+	<div class="wpb_video_widget wpb_content_element vc_clearfix   vc_video-aspect-ratio-169 vc_video-el-width-100 vc_video-align-center" >
+		<div class="wpb_wrapper">
+			
+			<div class="wpb_video_wrapper"><iframe title="Using the CoDrone EDU Controller" width="500" height="281" src="https://www.youtube.com/embed/ZcyFyvFIVGw?feature=oembed&enablejsapi=1&origin=https://archive.learn.robolink.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+		</div>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f17acec" name="6a2212f17acec" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 5</span></div>
+	
+			<h2>Fold Out the Antenna</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p><span style="font-weight: 400;">To get the best connection between the CoDrone EDU and your controller, fold out the antenna on top of your CoDrone EDU controller. Point the antenna directly at the drone while it is in flight. Make sure that the line of sight between your controller&#8217;s antenna and the CoDrone EDU is not obstructed. This could cause connection issues between the drone and the controller.</span></p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1061" height="983" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/open-controller-antenna.png" class="vc_single_image-img attachment-full" alt="" title="open-controller-antenna" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/open-controller-antenna.png 1061w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/open-controller-antenna-300x278.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/open-controller-antenna-1024x949.png 1024w" sizes="(max-width: 1061px) 100vw, 1061px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f17ba3c" name="6a2212f17ba3c" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 6</span></div>
+	
+			<h2>Takeoff and Land</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Practice a takeoff and landing. To takeoff, press and hold L1 for at least 3 seconds. You can let go when the drone takes off. To land, press and hold L1 again. Observe how CoDrone EDU hovers in the air. Is it stable?</p>
+<p><strong>Activity:</strong> Take off and hover for 3 seconds before landing. Do not move any of the joysticks while hovering.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1636" height="630" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/takeoff-land-image.png" class="vc_single_image-img attachment-full" alt="takeoff-land-image-cde" title="takeoff-land-image-cde" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/takeoff-land-image.png 1636w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/takeoff-land-image-300x116.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/takeoff-land-image-1024x394.png 1024w" sizes="(max-width: 1636px) 100vw, 1636px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f17c8da" name="6a2212f17c8da" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 7</span></div>
+	
+			<h2>Quick Takeoff</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Using L1 to take off can take a few seconds. If you need to take off more quickly, you can use this alternative method. To start the motors, push the left joystick downward, angling it toward the middle. Then, push up on the left joystick to take off.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1280" height="720" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/new_quick_takeoff.png" class="vc_single_image-img attachment-full" alt="" title="new_quick_takeoff" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/new_quick_takeoff.png 1280w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/new_quick_takeoff-300x169.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/new_quick_takeoff-1024x576.png 1024w" sizes="(max-width: 1280px) 100vw, 1280px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f17d9b8" name="6a2212f17d9b8" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 8</span></div>
+	
+			<h2>Emergency Stop</h2>
+	
+	
+	<div class="wpb_text_column wpb_content_element vc_custom_1723519910453" >
+		<div class="wpb_wrapper">
+			<p style="text-align: left;"><img decoding="async" class="size-medium wp-image-11766 alignleft" src="https://archive.learn.robolink.com/wp-content/uploads/2023/06/icon_warning-150x150-2-84x85.png" alt="" width="84" height="85" /></p>
+<p data-pm-slice="1 1 &#091;&#093;"><strong>WARNING</strong></p>
+<p data-pm-slice="1 1 &#091;&#093;">This command should only be used in emergencies or when safety has become a concern. In all other circumstances, you should use the land command to bring your drone safely to the ground.</p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p data-pm-slice="1 1 &#091;&#093;">Sometimes while flying you may find that something has gone wrong with your drone, like one of the motors has stopped working, or your drone has flown in a way you did not anticipate. In order to stop the drone in an emergency situation, the CoDrone EDU has a command that will stop the drone&#8217;s motors immediately without landing.</p>
+<p>If you must use the emergency stop, try to catch the drone whenever possible.</p>
+<p><strong>Activity:</strong> Press L1 to takeoff. Wait 4 seconds. Hold L1 while simultaneously pulling down the left joystick to shut the motors off immediately. What is different between emergency stopping and landing?</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1024" height="541" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/emergency-stop-cde-button-1024x541.png" class="vc_single_image-img attachment-large" alt="emergency-stop-cde-button" title="emergency-stop-cde-button" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/emergency-stop-cde-button-1024x541.png 1024w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/emergency-stop-cde-button-300x158.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/emergency-stop-cde-button.png 1166w" sizes="(max-width: 1024px) 100vw, 1024px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f180b2e" name="6a2212f180b2e" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 9</span></div>
+	
+			<h2>Using the Joysticks to Move</h2>
+	
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<div>
+<div>Now that you are comfortable taking off and landing, try moving around with the joysticks.</div>
+</div>
+<div></div>
+<p>&nbsp;</p>
+<div><strong>Forward and Backward</strong></div>
+<div>
+<div>
+<div>Push the right joystick up and down to gently move CoDrone EDU forward and backward. This movement controls the <strong>pitch</strong> of the drone.</div>
+</div>
+<div></div>
+<div></div>
+</div>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1640" height="924" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-pitch.png" class="vc_single_image-img attachment-full" alt="" title="CDEGS-05-controller-pitch" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-pitch.png 1640w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-pitch-300x169.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-pitch-1024x577.png 1024w" sizes="(max-width: 1640px) 100vw, 1640px" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<div>
+<div><strong>Right and Left</strong></div>
+<div>Push the right joystick right and left to move CoDrone EDU side-to-side. This movement controls the <strong>roll</strong> of the drone.</div>
+</div>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1640" height="924" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-roll.png" class="vc_single_image-img attachment-full" alt="" title="CDEGS-05-controller-roll" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-roll.png 1640w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-roll-300x169.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-roll-1024x577.png 1024w" sizes="(max-width: 1640px) 100vw, 1640px" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<div>
+<div><strong>Up and Down</strong></div>
+<div>Push the left joystick up and down to move CoDrone up and down. This movement controls the <strong>throttle</strong> of the drone.</div>
+</div>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1640" height="924" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-throttle.png" class="vc_single_image-img attachment-full" alt="" title="CDEGS-05-controller-throttle" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-throttle.png 1640w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-throttle-300x169.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-throttle-1024x577.png 1024w" sizes="(max-width: 1640px) 100vw, 1640px" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<div>
+<div><strong>Turn Left and Right</strong></div>
+<div>Push the left joystick right and left to turn CoDrone EDU left and right. This movement controls the <strong>yaw</strong> of the drone. Note that the values of yaw will be positive when you turn left, and negative when you turn right. You will learn more about this when you learn about programming flight movements.</div>
+</div>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1640" height="924" src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-yaw.png" class="vc_single_image-img attachment-full" alt="" title="CDEGS-05-controller-yaw" srcset="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-yaw.png 1640w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-yaw-300x169.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-controller-yaw-1024x577.png 1024w" sizes="(max-width: 1640px) 100vw, 1640px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f181962" name="6a2212f181962" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 10</span></div>
+	
+			<h2>Change Speed</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>CoDrone EDU has three speed settings: S1, S2, and S3. Changing the speed setting will increase the max speed of your drone. The current speed setting is indicated on the top left of your controller screen. Try out all the speeds. Make sure you have enough room around you and never fly toward people, pets, or other objects.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="700" height="309" src="https://archive.learn.robolink.com/wp-content/uploads/2022/07/controllerscreen-복구됨.jpg" class="vc_single_image-img attachment-full" alt="" title="changing-speed-cde-button" srcset="https://archive.learn.robolink.com/wp-content/uploads/2022/07/controllerscreen-복구됨.jpg 700w, https://archive.learn.robolink.com/wp-content/uploads/2022/07/controllerscreen-복구됨-300x132.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f18272d" name="6a2212f18272d" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 11</span></div>
+	
+			<h2>Flips</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>To flip the drone, the drone battery has to be at least 50%.</p>
+<ol>
+<li>Press and hold R1 until you hear a sound from your controller.</li>
+<li>When you hear the sound, use the right joystick to select a direction (forward, backward, left, or right flip)</li>
+</ol>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="800" height="373" src="https://archive.learn.robolink.com/wp-content/uploads/2022/07/flip.jpg" class="vc_single_image-img attachment-full" alt="" title="flip-cde-buttons" srcset="https://archive.learn.robolink.com/wp-content/uploads/2022/07/flip.jpg 800w, https://archive.learn.robolink.com/wp-content/uploads/2022/07/flip-300x140.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f1832d7" name="6a2212f1832d7" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 12</span></div>
+	
+			<h2>Change LED Color</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Press R1 to cycle between the LED colors for the drone and remote. This is also a great way to check which drone the controller is connected to without needing to fly. Set your drone and controller to your favorite color.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="640" height="360" src="https://archive.learn.robolink.com/wp-content/uploads/2022/07/no-audio-r1-LED-cde_AdobeExpress.gif" class="vc_single_image-img attachment-full" alt="" title="no-audio-r1-LED-cde_AdobeExpress" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f183de6" name="6a2212f183de6" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 13</span></div>
+	
+			<h2>Change the Status Screen</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Use the &#8220;S&#8221; button to switch the status screen. The different screens show sensor data as well as crash data and firmware versions. Keep pressing &#8220;S&#8221; to return to the main screen, with the arrow displaying the heading.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="480" height="270" src="https://archive.learn.robolink.com/wp-content/uploads/2022/07/final-s-button_AdobeExpress.gif" class="vc_single_image-img attachment-full" alt="" title="final-s-button_AdobeExpress" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f184947" name="6a2212f184947" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 14</span></div>
+	
+			<h2>H Button and Homing Feature</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p><span style="font-weight: 400;">The CoDrone EDU has a &#8220;Return Home&#8221; feature that allows the drone to fly back to its takeoff position on its own! This can be helpful if you want an easy way to get your drone back to it&#8217;s starting position without flying it yourself.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Find an area for your CoDrone EDU to take off from. Make sure that this takeoff zone has plenty of space around it. We will be using the &#8220;return home&#8221; feature, and we don&#8217;t want to accidentally crash into anything!</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Let&#8217;s practice returning home! Make sure that your CoDrone EDU and CoDrone EDU remote are both powered on.</span></p>
+<p>&nbsp;</p>
+<ol>
+<li><span style="font-weight: 400;">Press and hold L1 to take off.</span></li>
+<li><span style="font-weight: 400;">Fly forward using the right stick. Try to get at least 6 feet away from your takeoff zone.</span></li>
+<li><span style="font-weight: 400;">Press and hold the &#8220;H&#8221; button on your remote until you hear a noise. Once you hear the remote beeping, let go of the &#8220;H&#8221; button.</span></li>
+<li><span style="font-weight: 400;">Your drone will now return to its takeoff zone</span></li>
+<li><span style="font-weight: 400;">Press and hold L1 to land, or hold down on the left stick and manually land.</span></li>
+</ol>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" class="vc_single_image-img " src="https://archive.learn.robolink.com/wp-content/uploads/2023/03/CDEGS-05-homing-feature-e1691701667752.png" width="900" height="900" alt="CDEGS-05-homing-feature" title="CDEGS-05-homing-feature" loading="lazy" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f1872b4" name="6a2212f1872b4" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 15</span></div>
+	
+			<h2>Piloting Challenges</h2>
+	
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<h3>Challenge 1</h3>
+<p>Use your joysticks to fly CoDrone EDU in the shape of the letters in the alphabet! Let&#8217;s start with an easy one. &#8220;D&#8221; for drone!</p>
+<ol>
+<li><span style="font-weight: 400;">Press and hold L1 to take off.</span></li>
+<li><span style="font-weight: 400;">Using the right stick, make your CoDrone EDU fly in a &#8220;D&#8221; shape.</span></li>
+<li> Press and hold L1 to land.</li>
+</ol>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_left wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="300" height="300" src="https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_d-300x300.png" class="vc_single_image-img attachment-medium" alt="" title="12_shape_d" srcset="https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_d-300x300.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_d-150x150.png 150w, https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_d-1024x1024.png 1024w, https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_d.png 2000w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Next, try the whole alphabet! Or spell each letter in your name.</p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<h3>Challenge 2</h3>
+<p>What happens when you fly CoDrone EDU forward while throttling up and down? You get a wave!</p>
+<ol>
+<li>Press and hold L1 to takeoff.</li>
+<li>Fly forward by pressing up on the right joystick.</li>
+<li>While flying forward, move your left joystick up and down.</li>
+<li>Press and hold L1 to land.</li>
+</ol>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="2181" height="492" src="https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_c.png" class="vc_single_image-img attachment-full" alt="" title="12_shape_c" srcset="https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_c.png 2181w, https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_c-300x68.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2022/03/12_shape_c-1024x231.png 1024w" sizes="(max-width: 2181px) 100vw, 2181px" /></div>
+		</figure>
+	</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f18a37c" name="6a2212f18a37c" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 16</span></div>
+	
+			<h2>More Shape Challenges</h2>
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p>Here are some more examples of flight challenges. Try out some of these challenging shapes.</p>
+
+		</div>
+	</div>
+<div class="wpb_images_carousel wpb_content_element vc_clearfix wpb_content_element"><div class="wpb_wrapper"><div id="vc_images-carousel-1-1780617969" data-ride="vc_carousel" data-wrap="true" style="width: 1024px;" data-interval="5000" data-auto-height="yes" data-mode="horizontal" data-partial="false" data-per-view="1" data-hide-on-end="false" class="vc_slide vc_images_carousel"><ol class="vc_carousel-indicators"><li data-target="#vc_images-carousel-1-1780617969" data-slide-to="0"></li><li data-target="#vc_images-carousel-1-1780617969" data-slide-to="1"></li><li data-target="#vc_images-carousel-1-1780617969" data-slide-to="2"></li><li data-target="#vc_images-carousel-1-1780617969" data-slide-to="3"></li><li data-target="#vc_images-carousel-1-1780617969" data-slide-to="4"></li></ol><div class="vc_carousel-inner"><div class="vc_carousel-slideline"><div class="vc_carousel-slideline-inner"><div class="vc_item"><div class="vc_inner"><a class="" href="https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_b-1024x1024.png" data-lightbox="lightbox[rel-9250-4162439591]"><img decoding="async" width="1024" height="1024" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_b-1024x1024.png" class="attachment-large" alt="cde-shape-circle" title="cde-shape-circle" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_b-1024x1024.png 1024w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_b-150x150.png 150w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_b-300x300.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_b.png 2000w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_a-1024x1024.png" data-lightbox="lightbox[rel-9250-4162439591]"><img decoding="async" width="1024" height="1024" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_a-1024x1024.png" class="attachment-large" alt="cde-shape-square" title="cde-shape-square" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_a-1024x1024.png 1024w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_a-150x150.png 150w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_a-300x300.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/12_shape_a.png 2000w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="https://archive.learn.robolink.com/wp-content/uploads/2021/11/6_shape-1024x667.png" data-lightbox="lightbox[rel-9250-4162439591]"><img decoding="async" width="1024" height="667" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/6_shape-1024x667.png" class="attachment-large" alt="cde-shape-rectangle" title="cde-shape-rectangle" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/6_shape-1024x667.png 1024w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/6_shape-300x195.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/6_shape.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="https://archive.learn.robolink.com/wp-content/uploads/2021/11/5_shape-902x1024.png" data-lightbox="lightbox[rel-9250-4162439591]"><img decoding="async" width="902" height="1024" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/5_shape-902x1024.png" class="attachment-large" alt="cde-shape-spiral-down" title="cde-shape-spiral-down" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/5_shape-902x1024.png 902w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/5_shape-264x300.png 264w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/5_shape.png 1500w" sizes="(max-width: 902px) 100vw, 902px" /></a></div></div><div class="vc_item"><div class="vc_inner"><a class="" href="https://archive.learn.robolink.com/wp-content/uploads/2021/11/2_shape-1024x877.png" data-lightbox="lightbox[rel-9250-4162439591]"><img decoding="async" width="1024" height="877" src="https://archive.learn.robolink.com/wp-content/uploads/2021/11/2_shape-1024x877.png" class="attachment-large" alt="cde-shape-spiral-square" title="cde-shape-spiral-square" srcset="https://archive.learn.robolink.com/wp-content/uploads/2021/11/2_shape-1024x877.png 1024w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/2_shape-300x257.png 300w, https://archive.learn.robolink.com/wp-content/uploads/2021/11/2_shape.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></div></div></div></div></div><a class="vc_left vc_carousel-control" href="#vc_images-carousel-1-1780617969" data-slide="prev"><span class="icon-prev"></span></a><a class="vc_right vc_carousel-control" href="#vc_images-carousel-1-1780617969" data-slide="next"><span class="icon-next"></span></a></div></div></div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><a id="6a2212f18ab0b" name="6a2212f18ab0b" class="scroll-spy-anchor"></a>
+<div class="robolink-step ">
+
+		<div class="robolink-step-head"><span>Step 17</span></div>
+	
+			<h2>Next Steps</h2>
+	
+	
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<div>
+<div>Since there are many features on the controller, we recommend reviewing and practicing with it often. Here are some main points to remember:</div>
+<ul>
+<li>Press and hold L1 to takeoff and land. Avoid emergency stop whenever possible.</li>
+<li>If your speed is inconsistent with other drones, check your speed by pressing L1.</li>
+<li>Know how to access the status screens by pressing S.</li>
+<li>Know how to identify different flight modes and how to reset them.</li>
+<li>Maintain batteries fully charged and antenna aimed at the drone for best connection.</li>
+<li>Take care of your controller, especially the USB port and all moving parts.</li>
+</ul>
+<div>In the next lesson, you will learn more about trimming. This can be done with the directional pads on the controller.</div>
+</div>
+
+		</div>
+	</div>
+
+</div>
+</div></div></div></div>
+</div>            </section>
+
+            	<div class="buttons-wrapper" id="lesson_login_btn_wrapper">
+			<a href="https://archive.learn.robolink.com/login/" class="robolink-btn robolink-btn-100">Log in to mark complete</a>
+			</div>
+	
+        </form>
+        
+    </article>
+</div>
+	<nav id="post-entries" class="post-entries fix">
+					<div class="nav-prev fl">
+				<a href="https://archive.learn.robolink.com/lesson/0-4-powering-pairing-and-charging-2-2/" rel="prev">
+					<span class="lnr lnr-chevron-left"></span>
+					0.4: Powering, Pairing, and Charging				</a>
+			</div>
+		
+					<div class="nav-next fr">
+				<a href="https://archive.learn.robolink.com/lesson/0-6-trimming/" rel="next">
+					0.6: Trimming					<span class="lnr lnr-chevron-right"></span>
+				</a>
+			</div>
+			</nav>
+			</div>
+			<div class="wh-sidebar one twelfth wh-padding">
+													<div class="wh-sensei-course-sidebar-text">
+											</div>
+									<div class="widget search-2 widget_search"><form role="search" method="get" class="search-form form-inline" action="https://archive.learn.robolink.com/">
+	<input type="search" value="" name="s" class="search-field" placeholder="Search Robolink Basecamp">
+	<label class="hidden">Search for:</label>
+	<button type="submit" class="search-submit">Search</button>
+</form>
+</div><div class="widget recent-comments-2 widget_recent_comments"><h5 class="widget-title">Recent Comments</h5><hr /><ul id="recentcomments"></ul></div><div class="widget archives-2 widget_archive"><h5 class="widget-title">Archives</h5><hr />
+			<ul>
+							</ul>
+
+			</div><div class="widget categories-2 widget_categories"><h5 class="widget-title">Categories</h5><hr />
+			<ul>
+				<li class="cat-item-none">No categories</li>			</ul>
+
+			</div><div class="widget meta-2 widget_meta"><h5 class="widget-title">Meta</h5><hr />
+		<ul>
+						<li><a href="https://archive.learn.robolink.com/login/">Log in</a></li>
+			<li><a href="https://archive.learn.robolink.com/feed/">Entries feed</a></li>
+			<li><a href="https://archive.learn.robolink.com/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div><div class="widget scp_working_hours-1 widget-working-hours"><h5 class="widget-title">Working Hours</h5><hr /><ul><li>
+				<span class="title">Monday</span>
+				<span class="hours">9am - 6pm</span>
+			</li><li>
+				<span class="title">Tuesday</span>
+				<span class="hours">9am - 6pm</span>
+			</li><li>
+				<span class="title">Wednesday</span>
+				<span class="hours">9am - 6pm</span>
+			</li><li>
+				<span class="title">Thursday</span>
+				<span class="hours">9am - 6pm</span>
+			</li><li>
+				<span class="title">Friday</span>
+				<span class="hours">9am - 6pm</span>
+			</li><li>
+				<span class="title">Saturday</span>
+				<span class="hours"><em>Closed</em></span>
+			</li><li>
+				<span class="title">Sunday</span>
+				<span class="hours"><em>Closed</em></span>
+			</li></ul></div><div class="widget scp_latest_posts-1 widget-latest-posts">					<h5 class="widget-title">Latest Posts</h5><hr />				<div class="items">
+					</div>
+				</div>			</div>
+		</div>
+	</div>
+	<footer id="robolink-footer" style="">
+    <div class="robolink-footer-wrapper">
+        <div class="footer-logo">
+            <img src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/images/star.svg" alt="Roi" />
+        </div>
+        <div class="footer-nav">
+            <a href="https://robolink.helpdocs.io/" target="_blank">Robolink Help</a> | <a href="https://archive.learn.robolink.com/terms-of-service/" target="_blank">Terms of Service</a> | <a href="https://archive.learn.robolink.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        </div>
+        <div class="footer-coppa-ferpa">
+            <div id="coppa-ferpa">
+    <div class="desc">
+        <a href="https://ikeepsafe.org/product/basecamp/" target="_blank">COPPA</a>&nbsp;and&nbsp;<a href="https://ikeepsafe.org/product/basecamp/" target="_blank">FERPA</a>&nbsp;certified
+    </div>
+    <div class="seal">
+        <a href="https://ikeepsafe.org/product/basecamp/" target="_blank"><img src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/images/coppa.png" alt="COPPA" class="coppa" /></a>
+        <a href="https://ikeepsafe.org/product/basecamp/" target="_blank"><img src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/images/ferpa.png" alt="FERPA" class="ferpa" /></a>
+    </div>
+</div>        </div>
+    </div>
+</footer>	<div id="robolink-popup-redirection" class="robolink-popup-redirection">
+    <div class="robolink-popup-redirection__overlay">
+        <div class="robolink-popup-redirection__content">
+            <p>
+                You are leaving Robolink's Basecamp lesson portal. Please be aware that any website outside of our Basecamp lesson portal will be subject to privacy policies different from this website.            </p>
+            <div class="robolink-popup-redirection__buttons">
+                <a href="#" id="robolink-popup-redirection__buttons-stay" class="robolink-popup-redirection__button">
+                    Stay on this site                </a>
+                <a href="#" id="robolink-popup-redirection__buttons-continue" class="robolink-popup-redirection__button robolink-btn2" target="_blank">
+                    Continue to external site                </a>
+            </div>
+        </div>
+    </div>
+</div>    <div id="robolink-popup-offline" class="robolink-popup-redirection">
+    <div class="robolink-popup-redirection__overlay">
+        <div class="robolink-popup-redirection__content">
+            <p>You are currently offline. The link that you clicked is not accessible in offline mode. If you need to access the link, you will need to connect your device online.</p>
+            <div class="robolink-popup-redirection__buttons">                
+                <a href="#" id="robolink-popup-offline__buttons-close" class="robolink-popup-redirection__button robolink-btn2 short">
+                    Close                </a>
+            </div>
+        </div>
+    </div>
+</div>    <div id="offline-mode">
+    You are offline. Basecamp running in offline mode.</div>		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/robolink/*","/wp-content/themes/skilled/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/vendor/react-jsx-runtime.min.js?ver=18.3.1" id="react-jsx-runtime-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/url.min.js?ver=9e178c9516d1222dc834" id="wp-url-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
+<script type="text/javascript" id="wp-api-fetch-js-after">
+/* <![CDATA[ */
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://archive.learn.robolink.com/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "88c75d00a0" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://archive.learn.robolink.com/wp-admin/admin-ajax.php?action=rest-nonce";
+//# sourceURL=wp-api-fetch-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/blob.min.js?ver=9113eed771d446f4a556" id="wp-blob-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/block-serialization-default-parser.min.js?ver=14d44daebf663d05d330" id="wp-block-serialization-default-parser-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/autop.min.js?ver=9fb50649848277dd318d" id="wp-autop-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/deprecated.min.js?ver=e1f84915c5e8ae38964c" id="wp-deprecated-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/dom.min.js?ver=26edef3be6483da3de2e" id="wp-dom-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/escape-html.min.js?ver=6561a406d2d232a6fbd2" id="wp-escape-html-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/element.min.js?ver=6a582b0c827fa25df3dd" id="wp-element-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/is-shallow-equal.min.js?ver=e0f9f1d78d83f5196979" id="wp-is-shallow-equal-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/keycodes.min.js?ver=34c8fb5e7a594a1c8037" id="wp-keycodes-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/priority-queue.min.js?ver=2d59d091223ee9a33838" id="wp-priority-queue-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/compose.min.js?ver=7a9b375d8c19cf9d3d9b" id="wp-compose-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/private-apis.min.js?ver=4f465748bda624774139" id="wp-private-apis-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/redux-routine.min.js?ver=8bb92d45458b29590f53" id="wp-redux-routine-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/data.min.js?ver=f940198280891b0b6318" id="wp-data-js"></script>
+<script type="text/javascript" id="wp-data-js-after">
+/* <![CDATA[ */
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+//# sourceURL=wp-data-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/html-entities.min.js?ver=e8b78b18a162491d5e5f" id="wp-html-entities-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/rich-text.min.js?ver=5bdbb44f3039529e3645" id="wp-rich-text-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/shortcode.min.js?ver=0b3174183b858f2df320" id="wp-shortcode-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/warning.min.js?ver=d69bc18c456d01c11d5a" id="wp-warning-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/blocks.min.js?ver=de131db49fa830bc97da" id="wp-blocks-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1" id="moment-js"></script>
+<script type="text/javascript" id="moment-js-after">
+/* <![CDATA[ */
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+//# sourceURL=moment-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/date.min.js?ver=795a56839718d3ff7eae" id="wp-date-js"></script>
+<script type="text/javascript" id="wp-date-js-after">
+/* <![CDATA[ */
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":1},"formats":{"time":"g:i a","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":-7,"offsetFormatted":"-7","string":"America/Los_Angeles","abbr":"PDT"}} );
+//# sourceURL=wp-date-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/primitives.min.js?ver=0b5dcc337aa7cbf75570" id="wp-primitives-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/components.min.js?ver=ad5cb4227f07a3d422ad" id="wp-components-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/keyboard-shortcuts.min.js?ver=fbc45a34ce65c5723afa" id="wp-keyboard-shortcuts-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/commands.min.js?ver=cac8f4817ab7cea0ac49" id="wp-commands-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/notices.min.js?ver=f62fbf15dcc23301922f" id="wp-notices-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/preferences-persistence.min.js?ver=e954d3a4426d311f7d1a" id="wp-preferences-persistence-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/preferences.min.js?ver=2ca086aed510c242a1ed" id="wp-preferences-js"></script>
+<script type="text/javascript" id="wp-preferences-js-after">
+/* <![CDATA[ */
+( function() {
+				var serverData = false;
+				var userId = "0";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+//# sourceURL=wp-preferences-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/style-engine.min.js?ver=7c6fcedc37dadafb8a81" id="wp-style-engine-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/token-list.min.js?ver=cfdf635a436c3953a965" id="wp-token-list-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/block-editor.min.js?ver=6ab992f915da9674d250" id="wp-block-editor-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/dist/server-side-render.min.js?ver=7db2472793a2abb97aa5" id="wp-server-side-render-js"></script>
+<script type="text/javascript" id="aislin-plugin-gutenberg-js-extra">
+/* <![CDATA[ */
+var aislin_plugin = {"thumbnail_sizes":{"thumbnail":"thumbnail","course_archive_thumbnail":"course_archive_thumbnail (100x100)","course_single_thumbnail":"course_single_thumbnail (100x100)","lesson_archive_thumbnail":"lesson_archive_thumbnail (100x100)","lesson_single_thumbnail":"lesson_single_thumbnail (100x100)","1536x1536":"1536x1536 (1536x1536)","2048x2048":"2048x2048 (2048x2048)","robolink_lesson":"robolink_lesson (378x0)","robolink_lesson_responsive":"robolink_lesson_responsive (193x193)","robolink_lesson_thumbnail":"robolink_lesson_thumbnail (220x220)","robolink_video_thumbnail":"robolink_video_thumbnail (301x170)","post-thumbnail":"post-thumbnail (150x150)","wh-big":"wh-big (1140x500)","wh-featured-image":"wh-featured-image (1000x548)","wh-medium":"wh-medium (768x496)","wh-square":"wh-square (768x768)","wh-thumb-third":"wh-thumb-third (296x216)","wh-thumb-fourth":"wh-thumb-fourth (260x190)","wh-course-search-thumb":"wh-course-search-thumb (260x170)","full-width":"full-width"},"teacher":{"post_type":{"name":"teacher"},"category":{"name":"teacher_category"}}};
+//# sourceURL=aislin-plugin-gutenberg-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/public/js/gutenberg.js?ver=3271e6493df4e45dae194571538317d3" id="aislin-plugin-gutenberg-js"></script>
+<script type="text/javascript" id="robolink-js-extra">
+/* <![CDATA[ */
+var robolink_ajax = {"ajax_url":"https://archive.learn.robolink.com/wp-admin/admin-ajax.php","ajax_nonce":"d45e8d55e4","ajax_login_url":"https://archive.learn.robolink.com/login/","site_url":"https://archive.learn.robolink.com"};
+//# sourceURL=robolink-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/robolink/public/assets/js/robolink-public.min.js?ver=6.9" id="robolink-js"></script>
+<script type="text/javascript" id="robolink-pwa-js-extra">
+/* <![CDATA[ */
+var robolinkPwa = {"install_cache":"false"};
+//# sourceURL=robolink-pwa-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/robolink/public/assets/js/robolink-pwa.js?ver=1.1.5" id="robolink-pwa-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/robolink/assets/dist/robolink_external_links_js.js?ver=1.1.5" id="robolink-external-links-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/robolink/assets/dist/robolink_offline_js.js?ver=1.1.5" id="robolink-offline-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/packages/assets/assets/js/jquery-parallax.js" id="jquery-parallax-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=UJyD+5WcuYcPGWt" id="enlighterjs-js"></script>
+<script type="text/javascript" id="enlighterjs-js-after">
+/* <![CDATA[ */
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+//# sourceURL=enlighterjs-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/plugins/fitvids.js" id="fitvids-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/plugins/superfish.js" id="superfish-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/plugins/hoverintent.js" id="hoverintent-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/plugins/scrollup.js" id="scrollup-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/plugins/jquery.sticky.js" id="jquery-sticky-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/plugins/natural-width-height.js" id="natural-width-height-js"></script>
+<script type="text/javascript" id="skilled-scripts-js-extra">
+/* <![CDATA[ */
+var wheels = {"siteName":"Robolink Basecamp","data":{"useScrollToTop":true,"useStickyMenu":true,"scrollToTopText":"","isAdminBarShowing":false,"initialWaypointScrollCompensation":"120","preloaderSpinner":0,"preloaderBgColor":"#304ffe"}};
+//# sourceURL=skilled-scripts-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/skilled/assets/js/wheels-main.min.js" id="skilled-scripts-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/robolink/vendor/prettyPhoto/js/jquery.prettyPhoto.js?ver=1.0.7" id="prettyPhoto-js-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/accordion.min.js?ver=1.13.3" id="jquery-ui-accordion-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/dist/robolink.js?ver=1.0.7" id="robolink-js-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/themes/robolink/assets/dist/scroll_spy.js?ver=1.0.7" id="robolink-scroll-spy-js-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.3" id="jquery-ui-controlgroup-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.3" id="jquery-ui-checkboxradio-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/button.min.js?ver=1.13.3" id="jquery-ui-button-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.3" id="jquery-ui-dialog-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/aislin-plugin/packages/assets/assets/js/jquery.magnific-popup.min.js?ver=6.9" id="jquery.magnific-popup-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=8.0.1" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/lib/vc/vc_carousel/js/transition.min.js?ver=8.0.1" id="vc_transition_bootstrap_js-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/lib/vc/vc_carousel/js/vc_carousel.min.js?ver=8.0.1" id="vc_carousel_js-js"></script>
+<script type="text/javascript" src="https://archive.learn.robolink.com/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/lightbox2/dist/js/lightbox.min.js?ver=8.0.1" id="lightbox2-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://archive.learn.robolink.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://archive.learn.robolink.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script></script></body>
+</html>
